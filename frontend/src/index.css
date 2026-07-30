@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  #root {
+    width: 100%;
+    text-align: left;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-indigo-600 hover:bg-indigo-700 text-white font-medium px-4 py-2 rounded-lg transition-colors duration-150 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .btn-secondary {
+    @apply bg-white hover:bg-slate-50 text-slate-700 font-medium px-4 py-2 rounded-lg border border-slate-200 transition-colors duration-150;
+  }
+  .input-field {
+    @apply w-full px-3 py-2 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition;
+  }
+  .card {
+    @apply bg-white rounded-xl border border-slate-200;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+  }
+}
+
+.ai-output {
+  color: #334155;
+  font-size: 0.9375rem;
+  line-height: 1.7;
+}
+
+.ai-output h1,
+.ai-output h2,
+.ai-output h3 {
+  color: #0f172a;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.ai-output h1 {
+  font-size: 1.25rem;
+}
+
+.ai-output h2 {
+  font-size: 1.125rem;
+}
+
+.ai-output h3 {
+  font-size: 1rem;
+}
+
+.ai-output h1:first-child,
+.ai-output h2:first-child,
+.ai-output h3:first-child {
+  margin-top: 0;
+}
+
+.ai-output p {
+  margin-bottom: 1rem;
+}
+
+.ai-output ul,
+.ai-output ol {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+
+.ai-output ul {
+  list-style-type: disc;
+}
+
+.ai-output ol {
+  list-style-type: decimal;
+}
+
+.ai-output li {
+  margin-bottom: 0.375rem;
+}
+
+.ai-output strong {
+  color: #0f172a;
+  font-weight: 600;
+}
+
+.ai-output code {
+  background: #f1f5f9;
+  padding: 0.125rem 0.375rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+}
+
+.ai-output hr {
+  border: 0;
+  border-top: 1px solid #e2e8f0;
+  margin: 1.5rem 0;
+}
