@@ -13,7 +13,7 @@ const allowedOrigins = [
   'http://localhost:5173',
   'http://localhost:5174',
   'http://localhost:5175',
-  'https://your-app.netlify.app',
+  'https://jobtrackrai.netlify.app',
 ];
 
 app.use(cors({
@@ -21,7 +21,7 @@ app.use(cors({
     if (!origin || allowedOrigins.includes(origin)) {
       callback(null, true);
     } else {
-      callback(new Error('Not allowed by CORS'));
+      callback(null, false);
     }
   },
   credentials: true,
@@ -42,7 +42,7 @@ app.use(errorMiddleware);
 const start = async () => {
   await testConnection();
   app.listen(env.PORT, () => {
-    console.log(`Server running on http://localhost:${env.PORT}`);
+    console.log(`Server running on port ${env.PORT}`);
     console.log(`Environment: ${env.NODE_ENV}`);
   });
 };
