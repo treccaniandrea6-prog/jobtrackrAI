@@ -4,7 +4,7 @@ import { AppError } from '../middleware/error.middleware';
 
 const groq = new Groq({ apiKey: env.GROQ_API_KEY });
 
-const MODEL = 'llama-3.3-70b-versatile';
+const MODEL = 'openai/gpt-oss-120b';
 
 const askAI = async (prompt: string): Promise<string> => {
   if (!env.GROQ_API_KEY) {
